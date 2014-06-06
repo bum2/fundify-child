@@ -28,9 +28,9 @@ just to hide the video and the image from this template, because now it shows in
 - 
 only to force the redirect of the login to coopfunding.net, because it was going to the same login page... Will try to do it via 'hooks'...
 
-- shortcode-login.php
+- shortcode-submit.php
 -
-only adds some buttons to the tinymce wp-editor (image, format). Will try to do it via 'hooks'...
+only adds some buttons to the tinymce wp-editor (image, format), in the frontend campaign submit. Will try to do it via 'hooks'...
 
 - style.css
 - 
