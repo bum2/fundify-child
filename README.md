@@ -20,4 +20,18 @@ this adds the markup for the slider jquery plugin 'carousel', using the same thu
 this changes some templating markups, from the 'content' div to the 'sidebar' div ('project-details', 'meta' and 'share'). Also it eliminates the starting big 'featured image' from the main content and only shows the video if it is set.
 The 'featured image' of each campaign must be 360x222 px to fit good in the carousel.
 
-...
+- campaign/project-details.php
+- 
+just to hide the video and the image from this template, because now it shows in the sidebar. The video is showing big and good (if set) in the main-content div, at single-campaign.php
+
+- shortcode-login.php
+- 
+only to force the redirect of the login to coopfunding.net, because it was going to the same login page... Will try to do it via 'hooks'...
+
+- shortcode-login.php
+-
+only adds some buttons to the tinymce wp-editor (image, format). Will try to do it via 'hooks'...
+
+- style.css
+- 
+is the collection of css changes to render the coopfunding.net site
