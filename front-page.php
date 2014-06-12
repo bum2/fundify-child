@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Front Page, with a crousel
+ * Template Name: Front Page (carousel)
  *
  * This should be used in conjunction with the Fundify plugin.
  *
@@ -42,24 +42,26 @@ get_header();
 				<?php endwhile; ?>
 			</ul>
 			<?php endfor; ?>
-			<script src="js/jquery.carouFredSel-6.2.1-packed.js"></script>
+			
+			<?php wp_register_script( 'carouFredSel', get_stylesheet_directory_uri().'/js/jquery.carouFredSel-6.2.1-packed.js', ['jquery'], '6.2.1' );
+			      wp_enqueue_script( 'carouFredSel');
+			 ?>
+			
 			<script type="text/javascript" >
-
-
-jQuery(document).ready(function() {
-    // Using default configuration
-    jQuery('#carousel').carouFredSel({
-        items               : 3,
-        direction           : "left",
-        scroll : {
-            items           : 1,
-            easing          : "swing",
-            duration        : 700,                         
-            pauseOnHover    : true
-        }                   
-    });
-});
-		</script>
+				jQuery(document).ready(function() {
+				    // Using default configuration
+				    jQuery('#carousel').carouFredSel({
+				        items               : 3,
+				        direction           : "left",
+				        scroll : {
+				            items           : 1,
+				            easing          : "swing",
+				            duration        : 700,                         
+				            pauseOnHover    : true
+				        }                   
+				    });
+				});
+			</script>
 		<?php else : ?>
 			<?php while ( $featured->have_posts() ) : $featured->the_post(); ?>
 				<?php $thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id(), 'fullsize' ); ?>
