@@ -35,3 +35,12 @@ only adds some buttons to the tinymce wp-editor (image, format), in the frontend
 - style.css
 - 
 is the collection of css changes to render the coopfunding.net site
+
+- content-campaign-sort.php
+-
+is just to add a multilanguage hook in the first item of the campaign categories dropdown ('All')
+
+- inactive.php
+-
+is a new page-template to list all inactive campaigns, both success and unsuccess...
+
