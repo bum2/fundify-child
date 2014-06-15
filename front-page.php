@@ -37,9 +37,13 @@ get_header();
 		<?php if ( 'grid' == fundify_theme_mod( 'hero_style' ) ) : ?>
 			<?php for ( $i = 0; $i < 1; $i++ ) : shuffle( $featured->posts ); ?>
 			<ul id="carousel">
-				<?php while ( $featured->have_posts() ) : $featured->the_post(); ?>
-				<li><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?><br><?php the_title(); ?></a></li>
-				<?php endwhile; ?>
+				<?php while ( $featured->have_posts() ) : $featured->the_post();
+					//bumbum: get campaign to use method is_active and hide inactive
+					$campaign = atcf_get_campaign( $post );
+					if( $campaign->is_active() ) : ?>
+						<li><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?><br><?php the_title(); ?></a></li>
+				<?php endif;
+				endwhile; ?>
 			</ul>
 			<?php endfor; ?>
 			

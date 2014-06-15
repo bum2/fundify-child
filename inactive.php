@@ -13,10 +13,6 @@ $thing_args = array(
 );
 
 
-$thing_args[ 'meta_key' ]   = '_campaign_inactive'; //bumbum: try to filter inactive campaigns
-$thing_args[ 'meta_value' ] = 1;
-
-
 $things = new WP_Query( $thing_args );
 
 get_header(); 
@@ -34,11 +30,18 @@ get_header();
 			
 			<div id="projects">
 				<section>
+						
 					<?php if ( $things->have_posts() ) : ?>
 
-						<?php while ( $things->have_posts() ) : $things->the_post(); ?>
-							<?php get_template_part( 'content', 'campaign' ); ?>
-						<?php endwhile; ?>
+						<?php while ( $things->have_posts() ) : $things->the_post(); 
+							
+							//bumbum: retrieve $campaign to filter inactive projects using method is_active()
+							$campaign = atcf_get_campaign( $post );
+							if( !$campaign->is_active() ) :
+								 get_template_part( 'content', 'campaign' ); 
+							endif;
+						
+						endwhile; ?>
 
 						<?php do_action( 'fundify_loop_after' ); ?>
 
