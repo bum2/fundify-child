@@ -11,7 +11,7 @@
 		</div>
 		
 		<ul class="option-set">
-			<li><a href="<?php echo get_post_type_archive_link( 'download' ); ?>"><?php _e('All', 'fundify'); //bumbum: added translation for the 'all' menu item ?></a></li>
+			<li><a href="<?php echo get_post_type_archive_link( 'download' ); ?>"><?php __('All', 'fundify-child'); //bumbum: added translation for the 'all' menu item ?></a></li>
 			<?php
 				$categories = get_terms( fundify_is_crowdfunding() ? 'download_category' : 'category', array( 'hide_empty' => 0 ) );
 				foreach ( $categories as $category ) :
