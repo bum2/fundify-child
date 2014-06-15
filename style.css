@@ -34,6 +34,10 @@ License:      GNU General Public License
   color: fff;
   
 }
+.menu-toggle {
+  margin-top: 120px;
+}
+
 hgroup {
   position: relative;
   top: 20px;
@@ -187,8 +191,8 @@ body.mini-header #header {
   display: none;
 }
 .campaign-ribbon.success {
-  left: -3.2em;
-  top: 2.5em;
+  left: -2.5em;
+  top: 1.6em;
 }
 .campaign-ribbon.unsuccess {
   left: -1.5em;
