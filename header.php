@@ -39,34 +39,29 @@
 <body <?php body_class(); ?>>
 	<header id="header" class="site-header" role="banner">
 		<?php do_action('icl_language_selector'); ?>
-		<!-- bumbum: / pastilla torta -->
-		<div class="pastilla"><h2><?php echo __('NEW SITE','fundify'); ?></h2></div>
 		
 		<div class="container">
-
-			<a href="#" class="menu-toggle"><i class="icon-menu"></i></a>
 			
+			<hgroup>
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+					<?php $header_image = get_header_image();
+						if ( ! empty( $header_image ) ) : ?>
+							<img src="<?php echo esc_url( $header_image ); ?>" class="header-image" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" />
+					<?php endif; ?>
+					
+					<!-- /bumbum: aqui poso el titol COOPFUNDING amb spans per l'efecte OOs juntes -->
+					<h1 class="site-title"><span class="fosc">C<span class="fosc laO">O</span>OP</span>FUNDING <span class="eslogan"><?php echo __('free and cooperative cofinancing','fundify').'</span>'; //bloginfo( 'name' ); ?>
+						
+					</h1>
+				</a>
+			</hgroup>
 			
-			
+			<!-- / navigation -->
+			<a href="#" class="menu-toggle" style="margin-top: 120px;"><i class="icon-menu"></i></a>
 			<nav id="menu">
 				<?php wp_nav_menu( array( 'theme_location' => 'primary-left', 'container' => false ) ); ?>
 				<?php wp_nav_menu( array( 'theme_location' => 'primary-right', 'container' => false, 'menu_class' => 'right' ) ); ?>
 			</nav>
-			<!-- / navigation -->
-
-			<hgroup>
-				<h1 class="site-title">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-						<!-- bumbum: amago <?php //$header_image = get_header_image();
-						//if ( ! empty( $header_image ) ) : ?>
-							<img src="<?php //echo esc_url( $header_image ); ?>" class="header-image" width="<?php //echo get_custom_header()->width; ?>" height="<?php //echo get_custom_header()->height; ?>" alt="" />
-						<?php //endif; ?>
-						// aqui poso el titol amb spans per l'efecte OOs juntes -->
-						
-						<span><?php echo '<img src="http://www.coopfunding.net/wp-content/uploads/2014/04/avatarJosep1.png" class="avatar" width="95" height="95" alt="" /><span class="fosc">C<span class="fosc laO">O</span>OP</span>FUNDING <span class="eslogan">'.__('free and cooperative cofinancing','fundify').'</span>'; //bloginfo( 'name' ); ?></span>
-					</a>
-				</h1>
-			</hgroup>
 		
 		</div>
 		<!-- / container -->

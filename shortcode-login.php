@@ -44,7 +44,7 @@ add_shortcode( 'appthemer_crowdfunding_login', 'atcf_shortcode_login' );
 function atcf_shortcode_login_form() {
 	global $edd_options;
 
-	$redirect = isset ( $_GET[ 'redirect_to' ] ) ? $_GET[ 'redirect_to' ] : 'https://coopfunding.net'; //atcf_get_current_url() //bumbum: canvio default 'current_url' per pagina d'inici... ;
+	$redirect = isset ( $_GET[ 'redirect_to' ] ) ? $_GET[ 'redirect_to' ] : home_url( '/' ); //atcf_get_current_url() //bumbum: changed default 'current_url' for the 'home_url'... ;
 
 	wp_login_form( apply_filters( 'atcf_shortcode_login_form_args', array(
 		'redirect' => esc_url( $redirect )
