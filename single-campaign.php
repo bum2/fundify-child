@@ -51,6 +51,13 @@ get_header(); ?>
 					
 					<?php locate_template( array( 'campaign/author-info.php' ), true ); //bumbum ?>
 					
+					<div class="widget-area" role="complementary">
+						<div class="sidebar-widgets">
+							<?php dynamic_sidebar(1); ?>
+						</div>
+						<?php do_action( 'after_sidebar' ); ?>
+					</div>
+					
 				</aside>
 
 				<div id="main-content">

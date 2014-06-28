@@ -141,6 +141,7 @@ body.mini-header #header {
   padding: 35px 0px 0px;
 }
 
+
 #home-page-featured img {
   height: 222px;
   width: 360px;
@@ -349,6 +350,17 @@ input[type="file"], textarea, select {
 .entry-content h5 {
   font-weight: bold;
 }
+.entry-content table {
+  font-size: 14px;
+  line-height: 1.5;
+}
+.entry-content td {
+  border: 1px solid rgb(200,200,200);
+  padding: 10px;
+}
+.entry-content table thead tr {
+  background-color: #ded;
+}
 
 #footer {
   padding: 40px 50px;
@@ -500,4 +512,14 @@ code form, .atcf-register form code, .atcf-submit-campaign code, .atcf-profile c
 }
 #wp-description-editor-container {
    border: 1px solid rgb(219, 217, 212);
+}
+
+#sidebar .widget-bio .author-bio-links li a {
+   line-height: 20px;
+}
+img.alignright {
+    margin: 0.5em 0px 0.5em 1.71429em;
+}
+img.alignleft {
+    margin: 0.5em 1.71429em 0.5em 0px;
 }

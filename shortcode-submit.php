@@ -1098,13 +1098,16 @@ function atcf_shortcode_submit_field_wp_editor( $key, $field, $args ) {
 				'media_buttons' => true,
 				'teeny'         => true,
 				'quicktags'     => false,
-				'editor_css'    => '<style>body { background: white; }</style>',
+				'editor_css'    => '',
 				'tinymce'       => array(
 					'theme_advanced_path'     => false,
 					/* bumbum: aqui afegeixo més botons al editor de text... */
-					'theme_advanced_buttons1' => 'bold,italic,bullist,numlist,blockquote,justifyleft,justifycenter,justifyright,link,unlink,formatselect,image',
+					'theme_advanced_buttons1' => 'bold,italic,bullist,numlist,blockquote,justifyleft,justifycenter,justifyright,link,unlink,formatselect,pastetext', /*,image,wp_adv,text,codemagic',
+					'theme_advanced_buttons3_add' => 'pastetext,pasteword,selectall', */
+
 					'plugins'                 => 'paste',
-					'paste_remove_styles'     => true
+					'paste_remove_styles'     => true,
+					'paste_remove_spans' 	=>   true
 				),
 			) ) );
 		?>
