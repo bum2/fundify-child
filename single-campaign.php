@@ -72,7 +72,7 @@ get_header(); ?>
 							</div>
 						</div>
 					<?php else : ?>
-						<?php //the_post_thumbnail( 'blog' ); // bumbum?>
+						<?php //the_post_thumbnail( 'blog' ); // bumbum ?>
 					<?php endif; // bumbum ?>
 					
 					
