@@ -11,16 +11,20 @@ Text Domain:  fundify-child
 License:      GNU General Public License
 */
 
-@import url("../fundify/style.css");
+/*@import url("../fundify/style.css");*/
 
 /* =Theme customization starts here
 -------------------------------------------------------------- */
 
+html body.campaign-widget {
+  background: none; /*url("https://coopfunding.net/wp-content/uploads/2015/11/blanc_fons1.png");*/
+}
+
 .pastilla {
-  display: none; /* block; */
+  display: block;
   position: absolute;
-  top: 35px;
-  left: -40px;
+  top: 18px;
+  left: -50px;
   transform: rotate(-42deg);
   -webkit-transform: rotate(-42deg);
   -moz-transform: rotate(-42deg);
@@ -32,20 +36,60 @@ License:      GNU General Public License
   font-family: 'Oswald', sans-serif;
   font-size: 18px;
   color: fff;
-  
 }
-.menu-toggle {
-  margin-top: 120px;
+.pastilla h2 a {
+  color: fff;
+}
+.pastilla h2 a:hover {
+  color: 333;
 }
 
+/*  COMMENTS  */
+.edd-page #comments {
+  display: none;
+}
+
+/*  CAPTCHA REGISTER */
+
+.captchaSizeDivLarge, .captchaSizeDivSmall {
+  float: left;
+}
+#captcha_code_side_login {
+  width: 250px;
+}
+#registerform p label {
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 5px;
+}
+#registerform p input.input {
+  width: 100%;
+}
+#registerform p.atcf-register-password {
+  margin-bottom: 0px;
+}
+#registerform p.atcf-register-submit {
+  float: left;
+}
+
+/*  HEADER  */
+
 hgroup {
-  position: relative;
-  top: 20px;
+  /*position: relative;
+  top: 20px;*/
+  height: 100%;
+  padding-top: 15px;
+  z-index: -1;
 }
 header #lang_sel {
-  float: right;
+  /*float: right;*/
   margin: 0px;
   vertical-align: top;
+  position: absolute;
+  right: 0px;
+  z-index: 9999;
+}
+header #lang_sel ul ul {
   z-index: 888;
 }
 
@@ -53,101 +97,337 @@ header #lang_sel {
   height: 42px;
 }*/
 
+/*div#page {
+  background-color: rgb(240, 240, 225); 
+}
+div#home-page-featured {
+  background-color: rgb(240, 240, 225); 
+}
+.sort-tabs li a {
+  background-color: #fff;
+}
+.search-box {
+  background-color: #fff;
+}*/
+
+body {
+  background-color: #f2f2f2;
+}
+
 body.mini-header #header {
   padding-top: 0px;
   height: 145px;
-}
-.site-header #menu {
-  top: 159px; 
+  /*background-color: rgb(240, 240, 225);*/
 }
 
 .site-header .container {
-  width: 1140px;
+  /*width: 1140px;*/
+  z-index: 1;
 }
-.site-title a, .site-title a:hover, site-title a:focus, .site-title a:active {
+
+.site-header a, .site-header a:hover, site-header a:focus, .site-header a:active {
   text-decoration: none;
 }
-.site-title span {
+.site-header h1 {
   display: inline;
-  font-family: arial, 'Helvetica Neue', 'Open Sans', helvetica, arial, sans-serif;
+  font-family: 'Helvetica Neue', 'Open Sans', helvetica, arial, sans-serif;
   font-weight: bold;
   letter-spacing: -4px;
   position: relative;
-  top: -15px; /*-63px;*/
-  text-align: center;
+  top: 55px; /*-15px; -63px;*/
+  text-align: left;
   font-size: 70px;
   text-transform: none;
   color: 04937f;
   text-decoration: none;
+  line-height: 0em;
 }
 .site-title span.fosc {
   color: 02584c;
   top: 0px;
   display: inline;
 }
-.site-title span span.eslogan {
+.site-title span.eslogan {
   font-size: 20px;
-  display: inline;
-  letter-spacing: -0.5px;
+  display: inline-block;
+  letter-spacing: 0;
   top: 0px;
   color: 02584c;
   margin-left: 10px;
+  line-height: 1.5em;
 }
-.site-title span span.laO {
-  letter-spacing: -16px;
+.site-title span.laO {
+  /*letter-spacing: -16px; */
 }
 
-.site-title span img.avatar {
-  margin-right: 40px;
-  box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.4);
+.site-title img.avatar, .header-image {
+  /*box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.4);
   position: relative;
-  bottom: -22px;
+  bottom: -9px; -22px;*/
+  float: left;
+  margin: 30px 10px;
+  width: 85px;
+  height: 85px;
+}
+
+
+/*   M E N U   */
+
+.site-header #menu {
+  top: 159px;
 }
 
 .sub-menu {
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+  /*box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);*/
 }
-
+#menu .sub-menu {
+  /*background-color: rgb(240, 240, 225);*/
+}
 #menu .menu-item-1301, #menu .menu-item-1501, #menu .menu-item-1077 {
   padding: 0px;
 }
 
-.title {
-  background: url("http://www.coopfunding.net/wp-content/uploads/2014/03/bg_footer_clar.jpg") repeat scroll 0% 0%;
-  height: 140px;
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+#menu a {
+  height: auto;
 }
-.title.pattern-1 {
-  background: url("http://www.coopfunding.net/wp-content/uploads/2014/03/bg_footer_clar.jpg") repeat scroll 0% 0%;
-  
-}
-.title.pattern-2 {
-  background: url("http://www.coopfunding.net/wp-content/uploads/2014/03/bg_footer_clar.jpg") repeat scroll 0% 0%;
-  
-}
-.title.pattern-3 {
-  background: url("http://www.coopfunding.net/wp-content/uploads/2014/03/bg_footer_clar.jpg") repeat scroll 0% 0%;
-  
-}
-.title.pattern-4 {
-  background: url("http://www.coopfunding.net/wp-content/uploads/2014/03/bg_footer_clar.jpg") repeat scroll 0% 0%;
-  
-}
-.title h1, .title h3 {
-  text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.5);
-}
-.title h1 {
-  padding: 45px 0px 0px;
-}
-.title-two h1 {
-  padding: 35px 0px 0px;
+a.menu-toggle {
+  position: absolute;
+  right: 15px;
+  top: 135px;
 }
 
+
+/*   R E S P O N S I V E   */
+
+@media screen and (max-width: 1160px) {
+
+  #home-page-featured {
+    display: none;
+  }
+  .option-set.home {
+    display: none;
+  }
+  #sidebar .project-details .right-side {
+    width: auto;
+  }
+  #footer div.last-widget {
+    /*width: 40%;*/
+  }
+  .post-details #sidebar {
+    width: 29%;
+  }
+}
+@media screen and (min-width: 1160px) {
+  #home-page-featured {
+    display: block;
+  }
+  .sub-menu {
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+  }
+  .header-image {
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 880px) {
+
+  .site-header h1 {
+    font-size: 50px;
+    top: 55px;
+    letter-spacing: -2px;
+  }
+  .site-title span.eslogan {
+    font-size: 18px;
+    letter-spacing: 0;
+    margin-left: 4px;
+    /*margin-top: 4px;*/
+  }
+  .site-title img.avatar, .header-image {
+    width: 70px;
+    height: 70px;
+    margin: 35px 17px 0px 0px;
+  }
+  #sidebar .project-details .fund {
+    bottom: 20px;
+    margin: 15px 0;
+  }
+  .post-details #main-content {
+    float: left;
+  }
+  .post-details #sidebar {
+    width: 100%;
+  }
+  #footer div.last-widget {
+    width: 300px;
+  }
+  #footer div.legal-terms {
+    margin-right: 0;
+    width: 100%;
+  }
+  footer#footer {
+    padding: 25px 20px;
+  }
+}
+@media screen and (max-width: 560px) {
+  .site-header h1 {
+    font-size: 31px;
+  }
+  .site-title span.eslogan {
+    font-size: 12px;
+    margin-top: 4px;
+  }
+  .header-image {
+    width: 50px;
+    height: 50px;
+    margin: 38px 10px 0px 0px;
+  }
+  .mfp-container:before {
+    height: 600px;
+  }
+  .mfp-content .fundify-modal .atcf_custom_price_wrap {
+    width: 95%;
+  }
+  .fundify-modal .edd_download_purchase_form .atcf_custom_price_wrap input[type="text"] {
+    width: 85%;
+  }
+  .edd_download_purchase_form h2 {
+    margin: 0 20px 20px 0;
+  }
+}
+@media screen and (max-width: 350px) {
+  #footer .last-widget .copy img {
+    max-width: 270px;
+  }
+}
+@media screen and (max-width: 310px) {
+  .site-header h1 {
+    font-size: 20px;
+    letter-spacing: -1px;
+  }
+  .site-title span.eslogan {
+    font-size: 9px;
+    margin-top: 6px;
+    margin-left: 1px;
+  }
+  .header-image {
+    width: 30px;
+    height: 30px;
+    margin: 45px 8px 0 0;
+  }
+  .mfp-container:before {
+    height: 400px;
+  }
+}
+@media screen and (max-width: 560px) and (orientation: landscape) {
+  .mfp-container:before {
+    height: 320px;
+  }
+}
+
+/*    T I T L E   B A R    */
+
+.title {
+  background: url("/wp-content/uploads/2016/02/bg_footer-.jpg") repeat scroll 0% 0%;
+  height: auto;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+  padding: 40px;
+}
+.title.pattern-1 {
+  background: url("/wp-content/uploads/2016/02/bg_footer-.jpg") repeat scroll 0% 0%;
+}
+.title.pattern-2 {
+  background: url("/wp-content/uploads/2016/02/bg_footer-.jpg") repeat scroll 0% 0%;
+}
+.title.pattern-3 {
+  background: url("/wp-content/uploads/2016/02/bg_footer-.jpg") repeat scroll 0% 0%;
+}
+.title.pattern-4 {
+  background: url("/wp-content/uploads/2016/02/bg_footer-.jpg") repeat scroll 0% 0%;
+}
+.title h1, .title h3 {
+  text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.3);
+  color: rgb(0, 90, 77);
+}
+.title h1 {
+  padding: 0;
+}
+.title.title-two h1 {
+  padding: 0px;
+}
+.title h3 {
+  padding: 7px 0 0px;
+  margin-top: 0px;
+}
+
+.entry-content .icl_post_in_other_langs {
+  font-size: 90%;
+  float: right;
+}
+
+.post-details #main-content .entry-content p.wp-caption-text {
+  text-align: right;
+  margin-right: 10px;
+}
+
+/*  insertat via plugin --> */
+.sidebar-widgets .widget_custom_post_widget img {
+  float: both;
+  padding-bottom: 15px;
+}
+
+#sidebar .widget h3 {
+  margin-top: -10px;
+}
+
+#carousel li a {
+  display: block;
+  width:360px;
+  position: relative;  
+  overflow: hidden;
+  margin: 10px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+}
+#carousel li a img {
+  opacity: 1;
+}
 #home-page-featured img {
-  height: 222px;
+  margin: 0px;
+}
+#home-page-featured {
+  height: 240px;
+  background-color: #f2f2f2;
+  margin-top: 10px;
+}
+#carousel li a .caption {
+  background-color: rgba(255,255,255,0.75);
+  width: 100%;
+  height: auto;
+  position: absolute;
+  z-index: 100;
+  left: 0px;
+  font-size: 15px;
+  padding: 2px 5px 5px;
+  
+  color: rgb(90, 90, 90);
+  /**/
+}
+#carousel li a:hover .caption {
+  display: none;
+}
+#content {
+    padding: 20px 0px 50px;
+}
+.post-details {
+  background-color: #fff;
+}
+
+/* <-- insertat via plugin */
+
+
+#home-page-featured img {
+  height: 222px; 
   width: 360px;
-  margin: 10px 10px 3px 10px;
-  opacity: 0.8;
+  /*margin: 10px 10px 3px 10px;
+  opacity: 0.8;*/
 }
 #home-page-featured img:hover {
   box-shadow: 0px 0px 0px;
@@ -171,7 +451,7 @@ body.mini-header #header {
   width: 1140px;
   margin: 0px auto;
   font-size: 13px;
-  background-color: 222222;
+  /*background-color: 222222;*/
   padding: 10px;
 }
 #home-page-featured h1 {
@@ -186,6 +466,9 @@ body.mini-header #header {
 }
 #content .dropdown li a:hover {
   color: 02584c;
+}
+#content .sort-tabs .dropdown ul {
+  width: 156px;
 }
 .campaign-ribbon.featured {
   display: none;
@@ -217,6 +500,10 @@ body.mini-header #header {
   height: 0px;
   float: none;
 }*/
+
+
+/*   S I D E B A R   */
+
 .project-details {
   /*float: right;*/
   padding-bottom: 0;
@@ -224,11 +511,50 @@ body.mini-header #header {
   margin-bottom: 0;
 }
 .project-details .right-side, .post-details .widget-bio {
-  background-color: efeeee;
+  /*background-color: #fff;*/
+}
+.widget-bio, .single-reward-levels {
+  background-color: rgb(235, 240, 240);
+}
+.sidebar-widgets {
+  background: none;
+}
+#sidebar .widget_ultimate_posts {
+  padding: 0;
+}
+#sidebar .widget_edd_featured_download {
+  padding: 20px 0;
+}
+#sidebar .widget {
+  border-bottom: 0px none;
+}
+#sidebar .widget ul li {
+  margin: 0px;
+}
+#sidebar .widget ul li a {
+  margin-right: 40px;
+}
+
+.project-details .right-side, .single-reward-levels .edd_price_options.active li:hover:not(.inactive) {
+  background-color: rgb(225, 235, 230);
 }
 .project-details .contribute-now {
-  background-color: e9e8e8;
+  background: none;
+  border: none;
+  padding: 0 30px 30px 30px;
 }
+.project-details .right-side {
+  padding: 30px 30px 0 30px;
+  height: auto;
+  /* background: url("https://dev.coopfunding.net/wp-content/uploads/2015/04/bg_footer_clar2.jpg") repeat scroll 0% 0%;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);*/
+  float: none;
+}
+.project-details .fund {
+  position: relative;
+  margin: 15px 0px 5px;
+}
+
 
 .post-details #sidebar {
   float: right;
@@ -268,10 +594,10 @@ body.mini-header #header {
   position: relative;
   top: 185px;
   left: 780px;
-  width: 360px; 
+  width: auto; 
 }
 .post-details #main-content .entry-content p {
-  margin: 0px 0px 10px 0px;
+  margin: 0px 0px 20px 0px;
 }
 
 .post-details #sidebar .widget-bio {
@@ -286,7 +612,7 @@ body.mini-header #header {
   padding-top: 10px;
 }
 .post-details #sidebar .entry-share a {
-  margin: 10px 28px 5px 0px;
+  margin: 10px 20px 5px 0px;
 }
 .post-details #sidebar .entry-share a.share-widget.fancybox {
   margin: 10px 0px 5px 0px;
@@ -318,12 +644,13 @@ body.mini-header #header {
 
 .fundify-modal .atcf_custom_price_wrap input[type="text"] {
   width: 80%;
+  margin: 0px 20px 0px 8px;
 }
 .fundify-modal .atcf_custom_price_wrap {
-  width: 60%;
+  width: 45%;
 }
 .fundify-modal .atcf_custom_price_wrap + .edd_purchase_submit_wrapper {
-  width: 40%; 
+  width: 55%; 
 }
 
 .form-table span.description {
@@ -348,10 +675,26 @@ input[type="file"], textarea, select {
 .entry-content h5 {
   font-weight: bold;
 }
+.entry-content table {
+  font-size: 14px;
+  line-height: 1.5;
+}
+.entry-content td {
+  border: 1px solid rgb(200,200,200);
+  padding: 10px;
+}
+.entry-content table thead tr {
+  background-color: #ded;
+}
+
+
+/*    F O O T E R    */
 
 #footer {
-  padding: 40px 50px;
-  text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.3);
+  padding: 40px 40px;
+  /*text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);*/
+  color: rgb(0, 90, 77);
+  background: url("https://dev.coopfunding.net/wp-content/uploads/2015/04/bg_footer+.jpg") repeat scroll 0% 0%;
 }
 #footer .last-widget ul {
   margin-bottom: 0px;
@@ -363,14 +706,62 @@ input[type="file"], textarea, select {
   text-shadow: 1px 2px 2px rgba(255, 255, 255, 0.2);
 }*/
 #footer .last-widget {
-  width: 350px;
+  width: 320px;
+  /*width: 40%;*/
 }
 #footer .legal-terms {
   float: left;
+  margin-right: 40px;
+  /*margin-bottom: 40px;*/
 }
 #footer .legal-terms ul ul {
   list-style-type: disc;
   list-style-position: inside;
+}
+#footer .legal-terms h2 {
+  display: none;
+}
+#footer .stats ul li {
+  font-weight: normal;
+  font-size: 23px;
+  float: left;
+  padding: 5px 40px 0px 0px;
+  letter-spacing: 2px;
+  line-height: 39px;
+  font-family: "Oswald";
+}
+#footer .stats ul li strong {
+  display: block;
+  letter-spacing: 4px;
+  padding: 0px 0px 7px;
+  font-size: 40px;
+  line-height: 30px;
+}
+
+/*  CHECKOUT  */
+
+#edd_checkout_form_wrap .edd-cancel a {
+  background: #04937F none repeat scroll 0% 0%;
+  box-shadow: 0px -2px 0px rgba(0, 0, 0, 0.25) inset;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-family: Lato;
+  border: 0px none;
+  font-size: 19px;
+  border-radius: 4px;
+  padding: 15px 20px;
+  text-shadow: none;
+  color: #FFF;
+  display: block;
+  text-align: center;
+  /*clear: both;
+  line-height: 1.42857;
+  white-space: nowrap;*/
+  
+}
+#edd_checkout_form_wrap p.edd-cancel {
+  float: left;
+  margin-top: 20px;
 }
 
 .edd_cart_footer_row input[type="submit"]:not(#searchsubmit) {
@@ -386,7 +777,7 @@ input[type="file"], textarea, select {
   border: none;
   padding: 0px 0px 0px 0px;
   position: relative;
-  top: -25px;
+  /*top: -25px;*/
 }
 #edd_checkout_form_wrap .edd-payment-icons {
   position: relative;
@@ -466,6 +857,9 @@ input[type="file"], textarea, select {
   margin-top: 20px;
 }
 
+
+
+
 .entry-content p {
   line-height: 24px;
   margin: 0 0 1em;
@@ -493,10 +887,62 @@ input[type="file"], textarea, select {
 code form, .atcf-register form code, .atcf-submit-campaign code, .atcf-profile code {
   font: 15px/20px 'Lato',serif;
 }
+ul.atcf-profile-contributinos {
+  margin: 0 5px 0 0;
+}
 .entry-content .atcf-profile-campaigns .atcf-profile-campaign-overview .entry-title {
   font-size: 16px;
   padding: 0 0 15px;
 }
 #wp-description-editor-container {
    border: 1px solid rgb(219, 217, 212);
+}
+
+#sidebar .widget-bio .author-bio-links li a {
+  line-height: 20px;
+}
+#sidebar .widget-bio .author-bio-links {
+  margin: 0 0 15px 0; 
+}
+#sidebar .widget-bio .author-bio {
+  margin-bottom: 15px;
+}
+
+img.alignright {
+    margin: 0.5em 0px 0.5em 1.71429em;
+}
+img.alignleft {
+    margin: 0.5em 1.71429em 0.5em 0px;
+}
+
+.upw-posts .entry-title {
+    font-family: 'Oswald';
+    font-size: 17px;
+}
+.upw-posts .more-link {
+    color: rgb(4, 147, 127);
+}
+
+#main-content div.image img {
+    display: none;
+}
+
+#sidebar .widget ul li {
+  list-style: none;
+}
+
+.subsubsub li td {
+  white-space: inherit;
+}
+
+#menu li {
+  padding-bottom: 5px;
+}
+#menu li ul li {
+  padding-bottom: 0;
+}
+
+.digits li {
+  float: left;
+  width: 50%;
 }

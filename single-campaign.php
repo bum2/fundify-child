@@ -41,7 +41,7 @@ get_header(); ?>
 									'download_id' => $post->ID,
 									'class'       => '',
 									'price'       => false,
-									'text'        => __( 'Contribute Now', 'fundify' )
+									'text'        => __( 'Contribute Now', 'fundify-child' )
 								) ); 
 							else : // Inactive, just show options with no button
 								atcf_campaign_contribute_options( edd_get_variable_prices( $post->ID ), 'checkbox', $post->ID );
@@ -51,6 +51,13 @@ get_header(); ?>
 					
 					<?php locate_template( array( 'campaign/author-info.php' ), true ); //bumbum ?>
 					
+					<div class="widget-area" role="complementary">
+						<div class="sidebar-widgets">
+							<?php dynamic_sidebar('sidebar-1'); ?>
+						</div>
+						<?php do_action( 'after_sidebar' ); ?>
+					</div>
+
 				</aside>
 
 				<div id="main-content">
@@ -58,7 +65,7 @@ get_header(); ?>
 					<?php //locate_template( array( 'campaign/share.php' ), true ); // bumbum ?>
 					
 					
-					<?php if ( $campaign->video() ) : //TODO bumbum, afegir video ?>
+					<?php if ( $campaign->video() ) : // bumbum, afegir video ?>
 						<div class="image">
 							<div class="video-container">
 							<?php echo $wp_embed->run_shortcode( '[embed]' . $campaign->video() . '[/embed]' ); ?>

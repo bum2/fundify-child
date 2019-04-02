@@ -41,7 +41,7 @@ get_header();
 					//bumbum: get campaign to use method is_active and hide inactive
 					$campaign = atcf_get_campaign( $post );
 					if( $campaign->is_active() ) : ?>
-						<li><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?><br><?php the_title(); ?></a></li>
+						<li><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('blog'); ?><span class="caption"><?php the_title(); ?></span></a></li>
 				<?php endif;
 				endwhile; ?>
 			</ul>
@@ -65,6 +65,13 @@ get_header();
 				        }                   
 				    });
 				});
+
+				// Positioning image Captions
+				jQuery(".caption").each(function(i){
+					var h = 215 - jQuery(this).height();
+					jQuery(this).css('margin-top', h);
+				});
+					
 			</script>
 		<?php else : ?>
 			<?php while ( $featured->have_posts() ) : $featured->the_post(); ?>
@@ -109,9 +116,13 @@ get_header();
 						if ( $wp_query->have_posts() ) :
 					?>
 
-						<?php while ( $wp_query->have_posts() ) : $wp_query->the_post(); ?>
-							<?php get_template_part( 'content', fundify_is_crowdfunding() ? 'campaign' : 'post' ); ?>
-						<?php endwhile; ?>
+						<?php while ( $wp_query->have_posts() ) : $wp_query->the_post(); 
+							//bumbum: get campaign to use method is_active and hide inactive
+                                        		$campaign = atcf_get_campaign( $post );
+                                        		if( $campaign->is_active() ) :  ?>
+								<?php get_template_part( 'content', fundify_is_crowdfunding() ? 'campaign' : 'post' ); ?>
+						<?php 	endif;
+						      endwhile; ?>
 
 					<?php else : ?>
 

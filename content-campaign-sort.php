@@ -1,12 +1,12 @@
 <div class="sort-tabs" id="filter">
 				
-	<h3><?php _e( 'Show', 'fundify' ); ?></h3>
+	<h3><?php _e( 'Show', 'fundify-child' ); ?></h3>
 	<div class="dropdown">
 		<div class="current">
 			<?php if ( is_tax( 'download_category' ) ) : ?>
 				<?php single_term_title(); ?>
 			<?php else : ?>
-				<?php _e( 'All', 'fundify' ); ?>
+				<?php _e( 'All', 'fundify-child' ); ?>
 			<?php endif; ?>
 		</div>
 		
@@ -24,11 +24,11 @@
 	<?php if ( fundify_is_crowdfunding()  ) : ?>
 	<ul class="option-set home">
 		<?php if ( fundify_page_template_link( 'new-this-week.php' ) ) : ?>
-		<li><a href="<?php echo fundify_page_template_link( 'new-this-week.php' ); ?>" data-filter=".new-this-week"><?php _e( 'Recently Added', 'fundify' ); ?></a></li>
+		<li><a href="<?php echo fundify_page_template_link( 'new-this-week.php' ); ?>" data-filter=".new-this-week"><?php _e( 'Recently Added', 'fundify-child' ); ?></a></li>
 		<?php endif; ?>
 
 		<?php if ( fundify_page_template_link( 'staff-picks.php' ) ) : ?>
-		<li><a href="<?php echo fundify_page_template_link( 'staff-picks.php' ); ?>" data-filter=".staff-pick"><?php _e( 'Staff Picks', 'fundify' ); ?></a></li>
+		<li><a href="<?php echo fundify_page_template_link( 'staff-picks.php' ); ?>" data-filter=".staff-pick"><?php _e( 'Featured', 'fundify-child' ); ?></a></li>
 		<?php endif; ?>
 	</ul>
 	<?php endif; ?>
