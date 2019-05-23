@@ -57,12 +57,12 @@ html body.campaign-widget {
 #captcha_code_side_login {
   width: 250px;
 }
-#registerform p label {
+#registerform p label, #loginform p label {
   float: left;
   margin-right: 20px;
   margin-bottom: 5px;
 }
-#registerform p input.input {
+#registerform p input.input, #loginform p input.input {
   width: 100%;
 }
 #registerform p.atcf-register-password {
