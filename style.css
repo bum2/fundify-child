@@ -62,14 +62,41 @@ html body.campaign-widget {
   margin-right: 20px;
   margin-bottom: 5px;
 }
-#registerform p input.input, #loginform p input.input {
+#registerform p > input.input, #loginform p input.input {
   width: 100%;
 }
 #registerform p.atcf-register-password {
   margin-bottom: 0px;
 }
 #registerform p.atcf-register-submit {
+  margin-top: 25px;
+}
+
+#loginform p.login-remember {
+  margin: 17px 0;
+}
+#loginform p.login-remember label {
+  padding-bottom: 10px;
+  float: none;
+}
+.si_captcha_inline_login div.si_captcha_small {
   float: left;
+}
+#registerform div.si_captcha_small {
+  float: left;
+  margin: 17px 0;
+}
+#registerform p.si_captcha_label {
+  margin: 15px 10px;
+}
+#registerform p.si_captcha_label label {
+  float: none;
+}
+#registerform p.si_captcha_label label input {
+  width: auto;
+}
+.si_captcha_inline_login label {
+  display: block;
 }
 
 /*  HEADER  */
