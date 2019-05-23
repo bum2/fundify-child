@@ -10,6 +10,9 @@
 
 global $wp_query;
 
+include_once( ABSPATH . 'wp-content/plugins/appthemer-crowdfunding/includes/class-campaign.php' );
+include_once( ABSPATH . 'wp-content/plugins/appthemer-crowdfunding/includes/theme-stuff.php' );
+
 get_header(); 
 ?>
 
