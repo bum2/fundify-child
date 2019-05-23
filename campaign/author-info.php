@@ -6,6 +6,10 @@
 global $post, $campaign;
 
 $author = get_user_by( 'id', $post->post_author );
+if (!$author) : 
+    $author = $campaign->author();
+endif;
+
 ?>
 
 <div class="widget widget-bio">
